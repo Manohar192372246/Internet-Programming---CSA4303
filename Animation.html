@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Task 2 - Animations</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    min-height: 100vh;
+    margin: 0;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    color: #fff;
+    overflow: hidden;
+  }
+  h1 { margin-bottom: 50px; }
+  .stage { display: flex; gap: 60px; align-items: center; }
+
+  .ball {
+    width: 60px; height: 60px; border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #ff6b6b, #c0392b);
+    animation: bounce 1.2s infinite ease-in-out;
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-80px); }
+  }
+
+  .pulse {
+    width: 60px; height: 60px; border-radius: 50%;
+    background: #4ecdc4;
+    animation: pulse 1.5s infinite;
+  }
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.4); opacity: 0.6; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  .spin {
+    width: 60px; height: 60px;
+    background: #ffe66d;
+    animation: spin 2s linear infinite;
+  }
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .colorbar {
+    width: 60px; height: 60px; border-radius: 8px;
+    animation: colorchange 3s infinite;
+  }
+  @keyframes colorchange {
+    0%   { background: #ff6b6b; }
+    33%  { background: #4ecdc4; }
+    66%  { background: #6a0572; }
+    100% { background: #ff6b6b; }
+  }
+
+  p.instructions { margin-top: 60px; font-size: 14px; opacity: 0.85; }
+</style>
+</head>
+<body>
+  <h1>CSS Animation Demo</h1>
+  <div class="stage">
+    <div class="ball" title="Bounce"></div>
+    <div class="pulse" title="Pulse"></div>
+    <div class="spin" title="Spin"></div>
+    <div class="colorbar" title="Color Change"></div>
+  </div>
+  <p class="instructions">Four continuous animations built with @keyframes: bounce, pulse, spin, and color-change.</p>
+</body>
+</html>
