@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Task 1 - Transition and Transformation</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    color: #fff;
+  }
+  h1 { margin-bottom: 40px; text-shadow: 2px 2px 6px rgba(0,0,0,0.4); }
+  .box-container { display: flex; gap: 40px; flex-wrap: wrap; justify-content: center; }
+  .box {
+    width: 140px; height: 140px;
+    background: #ff6b6b;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: transform 0.6s ease, background-color 0.6s ease, border-radius 0.6s ease;
+  }
+  .scale-box:hover { transform: scale(1.3); background: #4ecdc4; }
+  .rotate-box { background: #ffe66d; color: #333; }
+  .rotate-box:hover { transform: rotate(180deg); background: #ff6b6b; color: #fff; }
+  .skew-box { background: #1a535c; }
+  .skew-box:hover { transform: skew(15deg, 5deg); background: #4ecdc4; }
+  .translate-box { background: #6a0572; }
+  .translate-box:hover { transform: translateY(-30px); border-radius: 50%; background: #ab83a1; }
+  p.instructions { margin-top: 40px; font-size: 14px; opacity: 0.85; }
+</style>
+</head>
+<body>
+  <h1>Transition &amp; Transformation Demo</h1>
+  <div class="box-container">
+    <div class="box scale-box">Scale</div>
+    <div class="box rotate-box">Rotate</div>
+    <div class="box skew-box">Skew</div>
+    <div class="box translate-box">Translate</div>
+  </div>
+  <p class="instructions">Hover over each box to see a different CSS transform, smoothly animated using the transition property.</p>
+</body>
+</html>
