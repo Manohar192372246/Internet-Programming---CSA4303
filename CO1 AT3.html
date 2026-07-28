@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Startup Web App</title>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #1e293b;
+  }
+
+  /* Navigation */
+  nav {
+    background: #1f4e79;
+    padding: 15px 30px;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+
+  nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+
+  /* Main content */
+  main {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 0 20px;
+  }
+
+  section {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #1f4e79;
+  }
+
+  /* Video */
+  video {
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 10px;
+  }
+
+  /* Form */
+  form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 12px;
+  }
+
+  form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+  }
+
+  form button {
+    margin-top: 18px;
+    padding: 10px 22px;
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+  }
+
+  form button:hover {
+    background: #1d4ed8;
+  }
+</style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h1>Welcome to Our Promo</h1>
+      <video src="video.mp4" controls>
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <section>
+      <h2>Register</h2>
+      <form action="/register" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Register</button>
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>
